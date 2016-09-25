@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <title> Angular JS </title>
+    <script src="D:\Angular JS\angular.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body> 
+
+<script> 
+		//Create an Angular JS Module 
+		var mymodule = angular.module("myModule", []);
+		mymodule.config(function(){
+			alert("Angular Js is loaded");
+		});
+		
+		mymodule.controller("MyController",function($scope){
+			$scope.First = ""; 
+			$scope.Last = "";
+		});
+				
+</script> 
+
+<form ng-controller="MyController">
+
+First Name : <input type= "text" name="First" ng-model = "First"/>  <br><br>
+Last Name  : <input type="text" name="Last" ng-model = "Last" />   <br><br>
+<button> Submit</button>
+<br><br>
+<table border='1' width="75"> 
+<tr> 
+<td  >{{First}}</td>
+<td  > {{Last}}  </td>
+</tr>
+</table>
+ </form> 
+
+</body> 
+</html>
